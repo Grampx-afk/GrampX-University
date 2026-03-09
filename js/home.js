@@ -2,7 +2,7 @@
 // js/home.js — Homepage Dynamic Content
 // =============================================
 
-const { formatDate, API_BASE, truncate } = window.GrampxUtil;
+// Utilities loaded from main.js via window.GrampxUtil
 
 // ── NEWS SLIDER ─────────────────────────────
 let newsData = [];
@@ -10,6 +10,7 @@ let currentSlide = 0;
 const VISIBLE = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
 
 async function loadNews() {
+  const { formatDate, API_BASE, truncate } = window.GrampxUtil;
   const slider = document.getElementById('newsSlider');
   const spinner = document.getElementById('newsSpinner');
   try {
@@ -24,6 +25,7 @@ async function loadNews() {
 }
 
 function renderNews() {
+  const { formatDate, truncate } = window.GrampxUtil;
   const slider = document.getElementById('newsSlider');
   const dotsContainer = document.getElementById('newsDots');
   if (!slider) return;
@@ -39,7 +41,6 @@ function renderNews() {
     </div>
   `).join('');
 
-  // Build dots
   const totalSlides = Math.max(0, newsData.length - VISIBLE + 1);
   if (dotsContainer) {
     dotsContainer.innerHTML = Array.from({ length: totalSlides }, (_, i) =>
@@ -56,7 +57,7 @@ function goToSlide(index) {
   if (!slider) return;
   const cards = slider.querySelectorAll('.news-card');
   if (!cards.length) return;
-  const cardW = cards[0].offsetWidth + 24; // gap
+  const cardW = cards[0].offsetWidth + 24;
   const maxIndex = Math.max(0, newsData.length - VISIBLE);
   currentSlide = Math.max(0, Math.min(index, maxIndex));
   slider.style.transform = `translateX(-${currentSlide * cardW}px)`;
@@ -68,7 +69,6 @@ function goToSlide(index) {
 document.getElementById('newsNext')?.addEventListener('click', () => goToSlide(currentSlide + 1));
 document.getElementById('newsPrev')?.addEventListener('click', () => goToSlide(currentSlide - 1));
 
-// Auto-slide every 5s
 setInterval(() => {
   const maxIndex = Math.max(0, newsData.length - VISIBLE);
   goToSlide(currentSlide >= maxIndex ? 0 : currentSlide + 1);
@@ -76,12 +76,13 @@ setInterval(() => {
 
 // ── EVENTS ──────────────────────────────────
 async function loadEvents() {
+  const { formatDate, API_BASE, truncate } = window.GrampxUtil;
   const grid = document.getElementById('eventsGrid');
   if (!grid) return;
   try {
     const res = await fetch(`${API_BASE}/events`);
     const json = await res.json();
-    const events = (json.data || []).slice(0, 4); // show max 4
+    const events = (json.data || []).slice(0, 4);
     grid.innerHTML = events.length ? events.map((ev, i) => `
       <div class="event-card fade-in" style="animation-delay:${i * 0.1}s">
         <img class="event-img" src="${ev.image || 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600'}" alt="${ev.title}" loading="lazy" />
