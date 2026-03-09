@@ -1,5 +1,5 @@
 // js/contact.js
-const { API_BASE, showAlert } = window.GrampxUtil;
+// Utilities from window.GrampxUtil
 
 document.getElementById('contactForm')?.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -11,7 +11,7 @@ document.getElementById('contactForm')?.addEventListener('submit', async (e) => 
   const btn     = document.getElementById('ctSubmitBtn');
 
   if (!name || !email || !message) {
-    showAlert('contactAlert', 'error', 'Please fill in your name, email, and message.');
+    window.GrampxUtil.showAlert('contactAlert', 'error', 'Please fill in your name, email, and message.');
     return;
   }
 
@@ -19,7 +19,7 @@ document.getElementById('contactForm')?.addEventListener('submit', async (e) => 
   btn.disabled = true;
 
   try {
-    const res = await fetch(`${API_BASE}/contact`, {
+    const res = await fetch(`${window.GrampxUtil.API_BASE}/contact`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, subject, message })
@@ -27,13 +27,13 @@ document.getElementById('contactForm')?.addEventListener('submit', async (e) => 
     const data = await res.json();
 
     if (data.success) {
-      showAlert('contactAlert', 'success', '✅ ' + data.message);
+      window.GrampxUtil.showAlert('contactAlert', 'success', '✅ ' + data.message);
       document.getElementById('contactForm').reset();
     } else {
-      showAlert('contactAlert', 'error', data.message || 'Failed to send message. Please try again.');
+      window.GrampxUtil.showAlert('contactAlert', 'error', data.message || 'Failed to send message. Please try again.');
     }
   } catch {
-    showAlert('contactAlert', 'error', 'Network error. Please ensure the server is running.');
+    window.GrampxUtil.showAlert('contactAlert', 'error', 'Network error. Please ensure the server is running.');
   } finally {
     btn.textContent = 'Send Message';
     btn.disabled = false;
