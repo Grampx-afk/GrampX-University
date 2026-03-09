@@ -1,5 +1,4 @@
 // js/gallery.js
-const { API_BASE } = window.GrampxUtil;
 
 let allImages = [];
 let filteredImages = [];
@@ -8,6 +7,7 @@ let currentLbIndex = 0;
 async function loadGallery(category = 'All') {
   const grid = document.getElementById('galleryGrid');
   grid.innerHTML = '<div class="spinner"></div>';
+  const API_BASE = window.GrampxUtil.API_BASE;
   try {
     const url = category === 'All'
       ? `${API_BASE}/gallery`
@@ -69,7 +69,6 @@ function updateLightbox() {
   document.getElementById('lbCaption').textContent = img.caption || img.category;
 }
 
-// Keyboard navigation
 document.addEventListener('keydown', (e) => {
   const lb = document.getElementById('lightbox');
   if (!lb.classList.contains('open')) return;
