@@ -2,7 +2,7 @@
 // js/main.js — Grampx University Global JS
 // =============================================
 
-const API_BASE = 'http://localhost:3000/api';
+const API_BASE = 'https://gramp-x-university.vercel.app/api';
 
 // ── Dark Mode ───────────────────────────────
 const themeToggleBtns = document.querySelectorAll('.theme-toggle');
