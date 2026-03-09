@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academics — Grampx University of Science</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/academics.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.png" alt="Grampx University Logo" class="nav-logo" />
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">Grampx University</span>
+          <span class="nav-brand-sub">of Science</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle">🌙</button>
+        <a href="admissions.html" class="btn btn-gold">Apply Now</a>
+        <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="nav-mobile">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="academics.html">Academics</a>
+      <a href="events.html">Events</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-content container">
+      <h1>Academics</h1>
+      <p>Explore our faculties, departments, and world-class programs</p>
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Academics</span></div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS OVERVIEW -->
+  <section class="section-pad">
+    <div class="container">
+      <p class="section-label">Degree Levels</p>
+      <h2 class="section-title">Programs Offered</h2>
+      <div class="section-divider"></div>
+      <div class="programs-grid">
+        <div class="program-card fade-in">
+          <div class="prog-icon">🎓</div>
+          <h3>BSc Programs</h3>
+          <p class="prog-duration">Duration: 4 Years</p>
+          <p>Our undergraduate programs combine rigorous theoretical foundations with hands-on laboratory and field work, preparing students for professional careers and postgraduate study.</p>
+          <a href="admissions.html#apply" class="btn btn-primary" style="margin-top:1rem;">Apply for BSc</a>
+        </div>
+        <div class="program-card featured fade-in delay-1">
+          <div class="prog-featured-badge">Most Popular</div>
+          <div class="prog-icon">📜</div>
+          <h3>MSc Programs</h3>
+          <p class="prog-duration">Duration: 18 months – 2 Years</p>
+          <p>Our postgraduate programs are research-intensive and industry-aligned, equipping graduates with specialist knowledge and advanced analytical skills for leadership roles.</p>
+          <a href="admissions.html#apply" class="btn btn-gold" style="margin-top:1rem;">Apply for MSc</a>
+        </div>
+        <div class="program-card fade-in delay-2">
+          <div class="prog-icon">🔬</div>
+          <h3>PhD Programs</h3>
+          <p class="prog-duration">Duration: 3 – 5 Years</p>
+          <p>Our doctoral programs are fully research-based. PhD candidates work alongside world-class faculty to produce original research that contributes to global scientific knowledge.</p>
+          <a href="admissions.html#apply" class="btn btn-primary" style="margin-top:1rem;">Apply for PhD</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACULTIES -->
+  <section class="section-pad faculties-section">
+    <div class="container">
+      <p class="section-label">Our Faculties</p>
+      <h2 class="section-title">Schools & Departments</h2>
+      <div class="section-divider"></div>
+      <div class="faculties-accordion" id="facultiesAccordion">
+
+        <div class="faculty-item fade-in">
+          <button class="faculty-header" onclick="toggleFaculty(this)">
+            <span class="fac-icon">⚙️</span>
+            <span class="fac-name">Faculty of Engineering</span>
+            <span class="fac-toggle">+</span>
+          </button>
+          <div class="faculty-body">
+            <div class="dept-grid">
+              <div class="dept-tag">Civil Engineering</div>
+              <div class="dept-tag">Electrical & Electronics Engineering</div>
+              <div class="dept-tag">Mechanical Engineering</div>
+              <div class="dept-tag">Chemical Engineering</div>
+              <div class="dept-tag">Computer Engineering</div>
+              <div class="dept-tag">Petroleum & Gas Engineering</div>
+            </div>
+            <p>The Faculty of Engineering offers rigorous programs that integrate scientific principles with practical engineering skills. Students benefit from fully equipped workshops, design studios, and industry partnerships.</p>
+            <a href="admissions.html#apply" class="btn btn-primary btn-sm">Apply to Engineering</a>
+          </div>
+        </div>
+
+        <div class="faculty-item fade-in delay-1">
+          <button class="faculty-header" onclick="toggleFaculty(this)">
+            <span class="fac-icon">💻</span>
+            <span class="fac-name">Faculty of Computing & Information Technology</span>
+            <span class="fac-toggle">+</span>
+          </button>
+          <div class="faculty-body">
+            <div class="dept-grid">
+              <div class="dept-tag">Computer Science</div>
+              <div class="dept-tag">Information Technology</div>
+              <div class="dept-tag">Cybersecurity</div>
+              <div class="dept-tag">Data Science & Artificial Intelligence</div>
+              <div class="dept-tag">Software Engineering</div>
+            </div>
+            <p>A forward-looking faculty training the next generation of tech innovators, software engineers, and data scientists. Our labs are equipped with industry-standard hardware and software tools.</p>
+            <a href="admissions.html#apply" class="btn btn-primary btn-sm">Apply to Computing</a>
+          </div>
+        </div>
+
+        <div class="faculty-item fade-in delay-2">
+          <button class="faculty-header" onclick="toggleFaculty(this)">
+            <span class="fac-icon">🧪</span>
+            <span class="fac-name">Faculty of Natural Sciences</span>
+            <span class="fac-toggle">+</span>
+          </button>
+          <div class="faculty-body">
+            <div class="dept-grid">
+              <div class="dept-tag">Biology</div>
+              <div class="dept-tag">Chemistry</div>
+              <div class="dept-tag">Physics</div>
+              <div class="dept-tag">Mathematics & Statistics</div>
+              <div class="dept-tag">Biochemistry</div>
+              <div class="dept-tag">Microbiology</div>
+              <div class="dept-tag">Geology</div>
+            </div>
+            <p>The Faculty of Natural Sciences offers programs that develop a deep understanding of the natural world through theoretical study and intensive laboratory and field research.</p>
+            <a href="admissions.html#apply" class="btn btn-primary btn-sm">Apply to Natural Sciences</a>
+          </div>
+        </div>
+
+        <div class="faculty-item fade-in delay-3">
+          <button class="faculty-header" onclick="toggleFaculty(this)">
+            <span class="fac-icon">🏥</span>
+            <span class="fac-name">Faculty of Medicine & Health Sciences</span>
+            <span class="fac-toggle">+</span>
+          </button>
+          <div class="faculty-body">
+            <div class="dept-grid">
+              <div class="dept-tag">Medicine & Surgery (MBBS)</div>
+              <div class="dept-tag">Nursing Science</div>
+              <div class="dept-tag">Public Health</div>
+              <div class="dept-tag">Pharmacology</div>
+              <div class="dept-tag">Medical Laboratory Science</div>
+              <div class="dept-tag">Physiotherapy</div>
+            </div>
+            <p>Our medical faculty is affiliated with leading teaching hospitals and delivers programs that blend scientific excellence with compassionate, patient-centred care.</p>
+            <a href="admissions.html#apply" class="btn btn-primary btn-sm">Apply to Medicine</a>
+          </div>
+        </div>
+
+        <div class="faculty-item fade-in delay-4">
+          <button class="faculty-header" onclick="toggleFaculty(this)">
+            <span class="fac-icon">🌿</span>
+            <span class="fac-name">Faculty of Environmental Sciences</span>
+            <span class="fac-toggle">+</span>
+          </button>
+          <div class="faculty-body">
+            <div class="dept-grid">
+              <div class="dept-tag">Environmental Management</div>
+              <div class="dept-tag">Geography & Regional Planning</div>
+              <div class="dept-tag">Urban & Regional Planning</div>
+              <div class="dept-tag">Climate Science</div>
+            </div>
+            <p>Addressing today's environmental challenges through science-based research and policy. Students engage with real-world environmental issues through fieldwork and research partnerships.</p>
+            <a href="admissions.html#apply" class="btn btn-primary btn-sm">Apply to Environmental Sciences</a>
+          </div>
+        </div>
+
+        <div class="faculty-item fade-in">
+          <button class="faculty-header" onclick="toggleFaculty(this)">
+            <span class="fac-icon">🌾</span>
+            <span class="fac-name">Faculty of Agriculture & Food Science</span>
+            <span class="fac-toggle">+</span>
+          </button>
+          <div class="faculty-body">
+            <div class="dept-grid">
+              <div class="dept-tag">Agricultural Science</div>
+              <div class="dept-tag">Animal Science & Production</div>
+              <div class="dept-tag">Food Science & Technology</div>
+              <div class="dept-tag">Crop Science & Horticulture</div>
+              <div class="dept-tag">Agricultural Economics</div>
+            </div>
+            <p>Combining traditional agricultural knowledge with modern biotechnology, this faculty equips graduates to lead in food security, sustainable farming, and agribusiness.</p>
+            <a href="admissions.html#apply" class="btn btn-primary btn-sm">Apply to Agriculture</a>
+          </div>
+        </div>
+
+        <div class="faculty-item fade-in delay-1">
+          <button class="faculty-header" onclick="toggleFaculty(this)">
+            <span class="fac-icon">🧬</span>
+            <span class="fac-name">Faculty of Biotechnology & Life Sciences</span>
+            <span class="fac-toggle">+</span>
+          </button>
+          <div class="faculty-body">
+            <div class="dept-grid">
+              <div class="dept-tag">Biotechnology</div>
+              <div class="dept-tag">Molecular & Cell Biology</div>
+              <div class="dept-tag">Genetics</div>
+              <div class="dept-tag">Neuroscience</div>
+            </div>
+            <p>Grampx's newest and most rapidly growing faculty, equipped with cutting-edge molecular laboratories and our recently commissioned BioNexus Research Suite.</p>
+            <a href="admissions.html#apply" class="btn btn-primary btn-sm">Apply to Biotechnology</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIAL PROGRAMS -->
+  <section class="section-pad">
+    <div class="container">
+      <p class="section-label">Beyond the Classroom</p>
+      <h2 class="section-title">Special Academic Programs</h2>
+      <div class="section-divider"></div>
+      <div class="special-grid">
+        <div class="special-card fade-in">
+          <div class="sp-icon">🌐</div>
+          <h4>Student Exchange Program</h4>
+          <p>Spend a semester at one of our 14 partner universities across Europe, Asia, and North America. Open to all undergraduate students with a minimum CGPA of 3.5.</p>
+        </div>
+        <div class="special-card fade-in delay-1">
+          <div class="sp-icon">🏆</div>
+          <h4>Honours & Excellence Track</h4>
+          <p>High-performing students (CGPA 4.5+) are invited to join the Honours Track — an accelerated academic pathway with mentorship from senior faculty and early research access.</p>
+        </div>
+        <div class="special-card fade-in delay-2">
+          <div class="sp-icon">🤝</div>
+          <h4>Industry Internship Program</h4>
+          <p>All undergraduate students complete a mandatory 6-month industrial attachment with one of our 80+ corporate partners before graduation.</p>
+        </div>
+        <div class="special-card fade-in delay-3">
+          <div class="sp-icon">📡</div>
+          <h4>Online & Part-Time Learning</h4>
+          <p>Selected postgraduate programs are available in flexible online and part-time formats, designed for working professionals seeking to advance their qualifications.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:2.5rem;">
+        <a href="admissions.html#apply" class="btn btn-primary">Apply for a Program</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="Grampx University" class="nav-logo" />
+          <h3>Grampx University of Science</h3>
+          <p>Where Strength Meet Might.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/hoeshateola" target="_blank">📸</a>
+            <a href="mailto:olamhidhe001@gmail.com">✉️</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="admissions.html#apply">Apply for BSc</a></li>
+            <li><a href="admissions.html#apply">Apply for MSc</a></li>
+            <li><a href="admissions.html#apply">Apply for PhD</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Contact Us</h4>
+          <p><span>📍</span> Clock Tower, Bermuda</p>
+          <p><span>📞</span> +234 704 490 3733</p>
+          <p><span>✉️</span> olamhidhe001@gmail.com</p>
+          <h4 style="margin-top:1.25rem;">Newsletter</h4>
+          <form class="newsletter-form" onsubmit="return false;">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Grampx University of Science. All rights reserved.</p>
+        <p>Clock Tower, Bermuda | olamhidhe001@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function toggleFaculty(btn) {
+      const item = btn.parentElement;
+      const body = item.querySelector('.faculty-body');
+      const toggle = btn.querySelector('.fac-toggle');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faculty-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.fac-toggle').textContent = '+';
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        toggle.textContent = '−';
+      }
+    }
+  </script>
+</body>
+</html>
